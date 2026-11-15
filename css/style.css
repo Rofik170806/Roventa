@@ -1,0 +1,1576 @@
+
+/* ==========================================
+   ROVENTA STORE
+   MAIN STYLESHEET
+========================================== */
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #f8f6f1;
+    color: #292724;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar {
+    width: 100%;
+    min-height: 82px;
+    padding: 0 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #f8f6f1;
+    position: relative;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #282724;
+}
+
+.logo span {
+    color: #b38a5b;
+}
+
+.logo small {
+    display: block;
+    font-size: 8px;
+    letter-spacing: 5px;
+    font-weight: 500;
+    margin-top: 3px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu a {
+    font-size: 12px;
+    color: #625d55;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #b38a5b;
+}
+
+.nav-button {
+    background: #292724;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 5px;
+    font-size: 11px;
+    transition: 0.3s ease;
+}
+
+.nav-button:hover {
+    background: #a17b50;
+    transform: translateY(-3px);
+}
+
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.hero {
+    min-height: 650px;
+    padding: 70px 7% 55px;
+
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(120deg, #eee8dc, #d9d0c2);
+
+    transition: background 0.7s ease;
+}
+
+/* PILIHAN WARNA HERO */
+
+.hero input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* BACKGROUND MENGIKUTI WARNA IPHONE */
+
+.hero:has(#warna-black:checked) {
+    background: linear-gradient(120deg, #e9e4dc, #d4c9b9);
+}
+
+.hero:has(#warna-silver:checked) {
+    background: linear-gradient(120deg, #e9ebed, #c9d0d5);
+}
+
+.hero:has(#warna-glacier:checked) {
+    background: linear-gradient(120deg, #dce8ef, #b6cbd9);
+}
+
+.hero:has(#warna-burgundy:checked) {
+    background: linear-gradient(120deg, #eadbd9, #c7a5a4);
+}
+
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+
+    max-width: 1250px;
+    margin: auto;
+}
+
+
+/* TEKS HERO */
+
+.hero-text {
+    max-width: 540px;
+}
+
+.hero-label {
+    color: #9c7952;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.hero-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 5vw, 66px);
+    line-height: 1.15;
+    font-weight: 600;
+    color: #282724;
+}
+
+.hero-text h1 span {
+    display: block;
+    color: #a17b50;
+}
+
+.hero-description {
+    max-width: 440px;
+    font-size: 14px;
+    line-height: 1.9;
+    color: #69635b;
+    margin-top: 25px;
+}
+
+
+/* TOMBOL HERO */
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.button-primary {
+    display: inline-block;
+    background: #292724;
+    color: white;
+    padding: 15px 22px;
+    border-radius: 4px;
+    font-size: 11px;
+    transition: 0.3s ease;
+}
+
+.button-primary:hover {
+    background: #a17b50;
+    transform: translateY(-4px);
+}
+
+.button-secondary {
+    display: inline-block;
+    border: 1px solid #8f8475;
+    color: #39352f;
+    padding: 14px 22px;
+    border-radius: 4px;
+    font-size: 11px;
+    transition: 0.3s ease;
+}
+
+.button-secondary:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+
+/* INFORMASI HERO */
+
+.hero-information {
+    display: flex;
+    gap: 35px;
+    margin-top: 65px;
+    flex-wrap: wrap;
+}
+
+.hero-information article h3 {
+    font-size: 14px;
+    color: #35312b;
+    margin-bottom: 5px;
+}
+
+.hero-information article p {
+    font-size: 10px;
+    color: #81796f;
+}
+
+
+/* VISUAL IPHONE */
+
+.hero-visual {
+    min-height: 480px;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.visual-caption {
+    position: absolute;
+    top: 5px;
+    right: 0;
+
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: #8c7965;
+}
+
+.hero-phone {
+    width: 100%;
+    height: 390px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.hero-phone img {
+    position: absolute;
+    height: 87%;
+    width: 87%;
+    object-fit: contain;
+
+    opacity: 0;
+    visibility: hidden;
+
+    filter: drop-shadow(0 30px 25px rgba(0, 0, 0, 0.2));
+
+    transform: translateY(20px) scale(0.94);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.6s ease,
+        visibility 0.5s ease;
+}
+
+
+/* GAMBAR AKTIF */
+
+.hero:has(#warna-black:checked) .phone-black {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.hero:has(#warna-silver:checked) .phone-silver {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.hero:has(#warna-glacier:checked) .phone-glacier {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.hero:has(#warna-burgundy:checked) .phone-burgundy {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+
+/* INFORMASI IPHONE HERO */
+
+.phone-information {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.phone-information p {
+    font-size: 8px;
+    letter-spacing: 3px;
+    color: #927653;
+    margin-bottom: 7px;
+}
+
+.phone-information h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    color: #302d28;
+}
+
+.phone-information span {
+    display: block;
+    font-size: 10px;
+    color: #746b60;
+    margin-top: 5px;
+}
+
+
+/* PILIHAN WARNA */
+
+.color-selector {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.color-selector label {
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    outline: 1px solid transparent;
+    transition: 0.3s ease;
+}
+
+.color-selector label:hover {
+    transform: scale(1.2);
+}
+
+.color-black {
+    background: #292929;
+}
+
+.color-silver {
+    background: #d9d9d9;
+}
+
+.color-glacier {
+    background: #9cb8c9;
+}
+
+.color-burgundy {
+    background: #703b45;
+}
+
+
+/* WARNA TERPILIH */
+
+.hero:has(#warna-black:checked) .color-black,
+.hero:has(#warna-silver:checked) .color-silver,
+.hero:has(#warna-glacier:checked) .color-glacier,
+.hero:has(#warna-burgundy:checked) .color-burgundy {
+    outline: 2px solid #8d704e;
+    outline-offset: 3px;
+}
+
+.color-caption {
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: #8a7a68;
+    margin-top: 13px;
+}
+
+.hero-number {
+    position: absolute;
+    bottom: 20px;
+    right: 7%;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #8b7966;
+}
+
+
+/* ==========================================
+   JUDUL SECTION UMUM
+========================================== */
+
+.judul-section {
+    max-width: 650px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.label-kecil {
+    color: #a17b50;
+    font-size: 10px;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.judul-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #252525;
+    margin: 15px 0;
+}
+
+.judul-section h2 span {
+    color: #a17b50;
+}
+
+.judul-section > p:last-child {
+    color: #777;
+    line-height: 1.8;
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   SHOWCASE KOLEKSI
+========================================== */
+
+.koleksi {
+    padding: 100px 7%;
+    background: #f8f6f1;
+    overflow: hidden;
+}
+
+.kumpulan-kartu {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+
+/* KARTU SERIES */
+
+.kartu-seri {
+    height: 510px;
+    min-width: 0;
+    padding: 24px 18px 18px;
+    border-radius: 20px;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(145deg, #e9e3d8, #d8d0c3);
+
+    transition:
+        background 0.7s ease,
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.kartu-seri:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+}
+
+.seri-14 {
+    background: linear-gradient(145deg, #e9e3d8, #d8d0c3);
+}
+
+.seri-15 {
+    background: linear-gradient(145deg, #e2e6e9, #cbd5dc);
+}
+
+.seri-16 {
+    background: linear-gradient(145deg, #e8e2d9, #d5cbbd);
+}
+
+
+/* KEPALA KARTU */
+
+.kepala-kartu {
+    position: relative;
+    z-index: 25;
+}
+
+.kepala-kartu p {
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: #8b755d;
+    font-weight: 700;
+}
+
+.kepala-kartu h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    color: #292724;
+    margin: 8px 0;
+}
+
+.kepala-kartu span {
+    font-size: 10px;
+    color: #706b64;
+}
+
+
+/* AREA GAMBAR */
+
+.area-tumpukan {
+    flex: 1;
+    position: relative;
+    min-height: 0;
+    margin-top: 10px;
+}
+
+.produk-tumpuk {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.produk-tumpuk figure {
+    position: absolute;
+    bottom: 25px;
+
+    width: 47%;
+    height: 270px;
+
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: auto;
+    cursor: pointer;
+
+    transition: transform 0.5s ease;
+}
+
+.produk-tumpuk img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.16));
+
+    transition: filter 0.5s ease;
+}
+
+
+/* POSISI IPHONE */
+
+.produk-14 figure,
+.produk-15 figure,
+.produk-16 figure {
+    left: 1%;
+    transform: rotate(-10deg);
+    z-index: 1;
+}
+
+.produk-14pro figure,
+.produk-15pro figure,
+.produk-16pro figure {
+    left: 27%;
+    transform: translateY(-12px);
+    z-index: 2;
+}
+
+.produk-14promax figure,
+.produk-15promax figure,
+.produk-16promax figure {
+    left: 52%;
+    transform: rotate(10deg);
+    z-index: 3;
+}
+
+
+/* EFEK GAMBAR HOVER */
+
+.produk-tumpuk figure:hover {
+    transform: translateY(-20px) rotate(0deg) scale(1.12);
+    z-index: 20;
+}
+
+.produk-tumpuk figure:hover img {
+    filter: drop-shadow(0 25px 20px rgba(0, 0, 0, 0.25));
+}
+
+
+/* DETAIL PRODUK */
+
+.detail-produk {
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+
+    width: 190%;
+    padding: 12px 14px;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(15px);
+
+    text-align: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translate(-50%, 12px);
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease,
+        visibility 0.35s ease;
+
+    pointer-events: none;
+}
+
+.produk-tumpuk figure:hover .detail-produk {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
+.detail-produk span {
+    color: #9b7955;
+    font-size: 8px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.detail-produk h4 {
+    color: #292724;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.detail-produk p {
+    color: #68635c;
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+
+/* FOOTER KARTU */
+
+.kaki-kartu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    z-index: 25;
+
+    padding-top: 12px;
+    border-top: 1px solid rgba(80, 70, 60, 0.2);
+
+    color: #766b5d;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+
+/* BACKGROUND HOVER IPHONE 14 */
+
+.seri-14:has(.produk-14 figure:hover) {
+    background: linear-gradient(145deg, #d9eafa, #a9c9e5);
+}
+
+.seri-14:has(.produk-14pro figure:hover) {
+    background: linear-gradient(145deg, #e5d9ed, #755f8d);
+}
+
+.seri-14:has(.produk-14promax figure:hover) {
+    background: linear-gradient(145deg, #eae9e9, #b6b5b3);
+}
+
+
+/* BACKGROUND HOVER IPHONE 15 */
+
+.seri-15:has(.produk-15 figure:hover) {
+    background: linear-gradient(145deg, #f5dce7, #e7b8cd);
+}
+
+.seri-15:has(.produk-15pro figure:hover) {
+    background: linear-gradient(145deg, #cccdb4,  #B9A99A);
+}
+
+.seri-15:has(.produk-15promax figure:hover) {
+    background: linear-gradient(145deg, #b6b9ba, #777D86);
+}
+
+
+/* BACKGROUND HOVER IPHONE 16 */
+
+.seri-16:has(.produk-16 figure:hover) {
+    background: linear-gradient(145deg, #B8D9CE,  #99ffe6);
+}
+
+.seri-16:has(.produk-16pro figure:hover) {
+    background: linear-gradient(145deg, #f0eae2, #C5C5C3);
+}
+
+.seri-16:has(.produk-16promax figure:hover) {
+    background: linear-gradient(145deg, #f1debd, #ffd58c);
+}
+
+
+/* CATATAN KOLEKSI */
+
+.catatan-koleksi {
+    text-align: center;
+    color: #888;
+    font-size: 10px;
+    margin-top: 30px;
+}
+
+
+/* ==========================================
+   PRODUK UNGGULAN
+========================================== */
+
+.unggulan {
+    padding: 100px 7%;
+    background: #eeebe4;
+}
+
+.daftar-produk {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.produk-card {
+    background: #faf9f6;
+    border-radius: 14px;
+    overflow: hidden;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.produk-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.09);
+}
+
+.produk-image {
+    height: 260px;
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e7e2d9;
+}
+
+.produk-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    transition: transform 0.5s ease;
+}
+
+.produk-card:hover .produk-image img {
+    transform: scale(1.08);
+}
+
+.produk-info {
+    padding: 23px;
+}
+
+.produk-info p {
+    color: #a17b50;
+    font-size: 8px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.produk-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin: 9px 0;
+}
+
+.produk-info span {
+    color: #777;
+    font-size: 11px;
+}
+
+.produk-info a {
+    display: block;
+    margin-top: 22px;
+    padding-top: 15px;
+
+    border-top: 1px solid #e2ded6;
+
+    color: #98734b;
+    font-size: 11px;
+    font-weight: 700;
+
+    transition: color 0.3s ease;
+}
+
+.produk-info a:hover {
+    color: #292724;
+}
+
+.keterangan-produk {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 10px;
+    line-height: 1.8;
+    color: #817a70;
+}
+
+
+/* ==========================================
+   TENTANG ROVENTA
+========================================== */
+
+.tentang {
+    padding: 110px 7%;
+    background: #f8f6f1;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 75px;
+}
+
+.tentang-visual {
+    min-height: 420px;
+    padding: 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    border-radius: 15px;
+
+    background:
+        radial-gradient(circle at top right, rgba(190, 158, 116, 0.45), transparent 50%),
+        linear-gradient(145deg, #37332e, #181715);
+
+    color: white;
+}
+
+.tentang-visual p {
+    color: #c6a67e;
+    font-size: 9px;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+.tentang-visual h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 43px;
+    line-height: 1.2;
+}
+
+.tentang-visual span {
+    margin-top: 20px;
+    color: #c7bdb0;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.tentang-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    line-height: 1.3;
+    margin: 20px 0;
+}
+
+.tentang-content h2 span {
+    color: #a17b50;
+}
+
+.tentang-content > p:not(.label-kecil) {
+    font-size: 12px;
+    line-height: 2;
+    color: #777066;
+    margin-bottom: 17px;
+}
+
+.tentang-content .button-primary {
+    margin-top: 15px;
+}
+
+
+/* ==========================================
+   KEUNGGULAN
+========================================== */
+
+.keunggulan {
+    padding: 100px 7%;
+    background: #eae5dc;
+}
+
+.keunggulan-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.keunggulan-item {
+    padding: 28px 22px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+
+    transition: 0.4s ease;
+}
+
+.keunggulan-item:hover {
+    background: #faf9f6;
+    transform: translateY(-7px);
+}
+
+.keunggulan-item span {
+    font-family: 'Playfair Display', serif;
+    color: #a17b50;
+    font-size: 24px;
+}
+
+.keunggulan-item h3 {
+    font-size: 14px;
+    margin: 20px 0 12px;
+}
+
+.keunggulan-item p {
+    color: #777066;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   PANDUAN PEMBELIAN
+========================================== */
+
+.panduan {
+    padding: 100px 7%;
+    background: #f8f6f1;
+}
+
+.langkah-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.langkah-item {
+    padding: 25px 20px;
+    border-top: 1px solid #c7b59e;
+}
+
+.langkah-item span {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #b08a60;
+}
+
+.langkah-item h3 {
+    font-size: 14px;
+    margin: 18px 0 10px;
+}
+
+.langkah-item p {
+    font-size: 11px;
+    color: #777066;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   FAQ
+========================================== */
+
+.faq {
+    padding: 100px 7%;
+    background: #eeeae2;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid #d2c9bb;
+    padding: 22px 5px;
+}
+
+.faq-item summary {
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: '+';
+    font-size: 20px;
+    color: #a17b50;
+    transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::after {
+    transform: rotate(45deg);
+}
+
+.faq-item p {
+    color: #777066;
+    font-size: 11px;
+    line-height: 1.9;
+    padding-top: 15px;
+    max-width: 700px;
+}
+
+
+/* ==========================================
+   KONTAK
+========================================== */
+
+.kontak {
+    padding: 90px 7%;
+
+    background:
+        radial-gradient(circle at top right, rgba(181, 139, 91, 0.25), transparent 45%),
+        linear-gradient(130deg, #37332e, #1d1b19);
+
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.kontak-content {
+    max-width: 550px;
+}
+
+.kontak-content .label-kecil {
+    color: #c5a57d;
+}
+
+.kontak-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.kontak-content h2 span {
+    color: #c5a57d;
+}
+
+.kontak-content > p:not(.label-kecil) {
+    color: #c9c0b5;
+    font-size: 12px;
+    line-height: 1.9;
+    max-width: 420px;
+}
+
+.button-whatsapp {
+    display: inline-block;
+    margin-top: 30px;
+
+    background: #c3a17a;
+    color: #25221e;
+
+    padding: 15px 24px;
+    border-radius: 4px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.button-whatsapp:hover {
+    background: white;
+    transform: translateY(-4px);
+}
+
+.kontak-detail {
+    min-width: 230px;
+}
+
+.kontak-detail article {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.kontak-detail article span {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #c5a57d;
+}
+
+.kontak-detail article p {
+    font-size: 12px;
+    color: #e4ded5;
+    margin-top: 8px;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer {
+    background: #181715;
+    color: white;
+    padding: 55px 7% 20px;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 45px;
+}
+
+.footer-brand .logo {
+    color: white;
+}
+
+.footer-brand p {
+    color: #a9a29a;
+    font-size: 11px;
+    line-height: 1.9;
+    margin-top: 20px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.footer-links h3 {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #c3a17a;
+    margin-bottom: 7px;
+}
+
+.footer-links a {
+    font-size: 11px;
+    color: #b7b0a7;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid #393530;
+    padding-top: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-bottom p {
+    font-size: 8px;
+    letter-spacing: 1px;
+    color: #8c857c;
+}
+
+
+/* ==========================================
+   RESPONSIVE TABLET
+========================================== */
+
+@media screen and (max-width: 1000px) {
+
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero-content {
+        gap: 20px;
+    }
+
+    .hero-information {
+        gap: 20px;
+    }
+
+    .kumpulan-kartu {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .keunggulan-list,
+    .langkah-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tentang {
+        gap: 35px;
+    }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE MOBILE
+========================================== */
+
+@media screen and (max-width: 650px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        padding: 18px 6%;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .menu {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 8px;
+        overflow-x: auto;
+    }
+
+    .menu a {
+        white-space: nowrap;
+        font-size: 10px;
+    }
+
+    .nav-button {
+        padding: 11px 13px;
+        font-size: 9px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding: 55px 6% 60px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .hero-text {
+        text-align: center;
+        margin: auto;
+    }
+
+    .hero-text h1 {
+        font-size: 43px;
+    }
+
+    .hero-description {
+        margin: 20px auto 0;
+        font-size: 12px;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-information {
+        justify-content: center;
+        margin-top: 35px;
+    }
+
+    .hero-information article {
+        text-align: center;
+    }
+
+    .hero-visual {
+        min-height: 420px;
+    }
+
+    .hero-phone {
+        height: 320px;
+    }
+
+    .phone-information h2 {
+        font-size: 21px;
+    }
+
+    .visual-caption {
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .hero-number {
+        right: 50%;
+        transform: translateX(50%);
+        white-space: nowrap;
+    }
+
+
+    /* JUDUL SECTION */
+
+    .judul-section {
+        margin-bottom: 35px;
+    }
+
+    .judul-section h2 {
+        font-size: 32px;
+    }
+
+
+    /* SHOWCASE */
+
+    .koleksi,
+    .unggulan,
+    .keunggulan,
+    .panduan,
+    .faq {
+        padding: 70px 6%;
+    }
+
+    .kumpulan-kartu {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .kartu-seri {
+        height: 490px;
+    }
+
+    .produk-tumpuk figure {
+        height: 265px;
+    }
+
+
+    /* PRODUK */
+
+    .daftar-produk {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .produk-image {
+        height: 280px;
+    }
+
+
+    /* TENTANG */
+
+    .tentang {
+        grid-template-columns: 1fr;
+        padding: 75px 6%;
+        gap: 35px;
+    }
+
+    .tentang-visual {
+        min-height: 330px;
+        padding: 30px;
+    }
+
+    .tentang-visual h2 {
+        font-size: 35px;
+    }
+
+    .tentang-content h2 {
+        font-size: 32px;
+    }
+
+
+    /* KEUNGGULAN DAN PANDUAN */
+
+    .keunggulan-list,
+    .langkah-list {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* KONTAK */
+
+    .kontak {
+        padding: 70px 6%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 35px;
+    }
+
+    .kontak-content h2 {
+        font-size: 39px;
+    }
+
+    .kontak-detail {
+        width: 100%;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding: 45px 6% 20px;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px 20px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+}
+
+
+/* ==========================================
+   AKHIR CSS ROVENTA STORE
+========================================== */
+
+/* =================================
+   INFORMASI HARGA DAN STOK PRODUK
+================================= */
+
+.produk-info .produk-kategori {
+    color: #a17b50;
+    font-size: 8px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+.produk-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.produk-kapasitas {
+    color: #777066;
+    font-size: 11px;
+    margin-bottom: 13px;
+}
+
+.produk-info .produk-harga {
+    font-family: 'DM Sans', sans-serif;
+    color: #292724;
+    font-size: 21px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.produk-kondisi,
+.produk-stok {
+    font-size: 10px;
+    color: #777066;
+    margin-top: 8px;
+}
+
+.produk-kondisi strong,
+.produk-stok strong {
+    color: #39352f;
+}
+
+/* STATUS STOK */
+
+.produk-stok::before {
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.produk-stok.tersedia::before {
+    background: #329b68;
+}
+
+.produk-stok.terbatas::before {
+    background: #d69b36;
+}
+
+.produk-stok.habis::before {
+    background: #d35454;
+}
+
+/* TOMBOL PRODUK */
+
+.produk-info a {
+    display: block;
+    margin-top: 18px;
+    padding-top: 15px;
+    border-top: 1px solid #e2ded6;
+
+    color: #98734b;
+    font-size: 11px;
+    font-weight: 700;
+
+    transition: color 0.3s ease;
+}
+
+.produk-info a:hover {
+    color: #292724;
+}
